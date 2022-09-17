@@ -1,0 +1,20 @@
+#inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.form-input input {
+    height: 50px;
+}
+
+#inputs span {
+    font-size: 60px;
+}
