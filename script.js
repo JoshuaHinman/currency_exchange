@@ -17,19 +17,18 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     function calculateUsd(event) {
         event.preventDefault();
-        let currency = parseInt(cad.value);
-        usd.value = currency / exchangeRate;
+        let currency = parseFloat(cad.value);
+        usd.value = (currency / exchangeRate).toFixed(2);
     }
 
     function calculateCad(event) {
         event.preventDefault();
-        let dollars = parseInt(usd.value);
-        cad.value = dollars * exchangeRate;
+        let dollars = parseFloat(usd.value);
+        cad.value = (dollars * exchangeRate).toFixed(2);
     }
 
     usd.addEventListener('input', calculateCad);
     cad.addEventListener('input', calculateUsd);
-
 
     getData();
 });
